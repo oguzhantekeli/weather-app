@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-
+import "./home.css";
+import trashIcon from "./trash.png";
 const Home = () => {
   const [error, SetError] = useState(false);
   return (
     <div className="container">
+      <h1>Weather App</h1>
       {/* Add new city */}
       <div className="addNew">
         <div className="inputGroup">
@@ -32,36 +33,38 @@ const Home = () => {
       </div>
 
       {/* City List */}
-      <City />
+      <div className="cityList">
+        <Cities />
+        <Cities />
+        <Cities />
+        <Cities />
+        <Cities />
+        <Cities />
+      </div>
     </div>
   );
 };
 
-const City = () => {
+const Cities = () => {
   return (
-    <div className="cityList">
-      <div className="cityBox">
-        <div className="infos">
-          <div className="textInfo">
-            <p>Antalya</p>
-            <p>Sunny</p>
-          </div>
-          <div className="icon">
-            <img
-              src={`http://openweathermap.org/img/wn/${"10d"}@2x.png`}
-              alt="City Weather Info"
-            />
-          </div>
+    <div className="cityBox">
+      <div className="infos">
+        <div className="textInfo">
+          <p>Petersburg, RU</p>
+          <p>Sunny</p>
         </div>
-        <div className="temperature">
-          <h2>33 C'</h2>
-        </div>
-        <div className="deleteCity">
+        <div className="icon">
           <img
-            src="https://cdn.icon-icons.com/icons2/2098/PNG/512/trash_icon_128726.png"
-            alt="trash icon"
+            src={`http://openweathermap.org/img/wn/${"10d"}@2x.png`}
+            alt="City Weather Info"
           />
         </div>
+      </div>
+      <div className="temperature">
+        <h2>33 C'</h2>
+      </div>
+      <div className="deleteCity">
+        <img src={trashIcon} alt="trash icon" />
       </div>
     </div>
   );

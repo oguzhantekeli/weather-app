@@ -1,0 +1,26 @@
+.app {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+input {
+  line-height: 1.5rem;
+  border: none;
+  padding-left: 15px;
+  outline: none;
+}
+
+input:focus,
+input:hover {
+  border: none;
+  outline: none;
+}
